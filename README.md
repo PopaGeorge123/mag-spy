@@ -1,1 +1,1 @@
-# mag-spy
+# price_tracker
