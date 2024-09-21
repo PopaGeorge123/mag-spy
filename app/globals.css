@@ -7,6 +7,10 @@ body {
   scroll-behavior: smooth !important;
 }
 
+.btn-custom-blue{
+  background-color: #4A00FF;
+}
+
 
 /* It makes the HTML progress bar filling smooth when value change. */
 progress::-webkit-progress-value {
