@@ -208,7 +208,7 @@ export async function executeActionForm(formData) {
 		for (let i = 0; i < all.length; i++) {
 			await sendEmail({
 				to: all[i].email,
-				subject: "Datapick App is Live – We Value Your Feedback!",
+				subject: "Datapick => MagSpy – Exciting Changes Ahead!",
 				from: config.mailgun.fromAdmin,
 				html: html(message, all[i].id),
 			});
@@ -235,7 +235,7 @@ export async function executeActionForm(formData) {
 			await sendEmail(
 				{
 					to: sendTo[i],
-					subject: "Datapick App is Live – We Value Your Feedback!",
+					subject: "Datapick => MagSpy – Exciting Changes Ahead!",
 					from: config.mailgun.fromAdmin,
 					html: html(message),
 				}
