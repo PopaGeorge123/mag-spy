@@ -16,7 +16,7 @@ export async function sendPriceAlertEmail(toEmail, productId, alertId) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Datapick</title>
+    <title>Welcome to MagSpy</title>
     <style>
         
         body {
@@ -102,9 +102,9 @@ export async function sendPriceAlertEmail(toEmail, productId, alertId) {
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://datapick.app/icon.png" alt="Datapick Logo">
+            <img src="https://MagSpy.app/icon.png" alt="MagSpy Logo">
         </div>
-        <h1 style="text-align: center;">Datapick Alert ${alert.name}</h1>
+        <h1 style="text-align: center;">MagSpy Alert ${alert.name}</h1>
 
         <div class="product_presint">
             <img class="main_image" src="${product.imageUrl}" alt="">
@@ -119,7 +119,7 @@ export async function sendPriceAlertEmail(toEmail, productId, alertId) {
         </div>
 
         <div class="footer">
-            <p>&copy; 2023 Datapick. All rights reserved.</p>
+            <p>&copy; 2023 MagSpy. All rights reserved.</p>
         </div>
     </div>
 </body>

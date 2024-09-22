@@ -12,7 +12,7 @@ function symbolToHtml(str) {
 	// Replace <link to text/"url"> with <a href="url">text</a>
 	const linkRegex = /<(.*?)\/"(.*?)">/g;
 	str = str.replace(linkRegex, (match, text, url) => {
-		return `<a class="link_to_datapick" href="${url}">${text}</a>`;
+		return `<a class="link_to_MagSpy" href="${url}">${text}</a>`;
 	});
 
 	// Replace |text| with <h1>text</h1>
@@ -33,7 +33,7 @@ function html(message, id) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Datapick</title>
+    <title>Welcome to MagSpy</title>
     <style>
         
         body {
@@ -106,7 +106,7 @@ function html(message, id) {
             padding: 20px 0;
             border-radius: 10px 10px 0 0;
         }
-        .link_to_datapick{
+        .link_to_MagSpy{
             color: #004151;
             text-decoration: none;
         }
@@ -116,7 +116,7 @@ function html(message, id) {
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://datapick.app/icon.png" alt="Datapick Logo">
+            <img src="https://MagSpy.app/icon.png" alt="MagSpy Logo">
         </div>
         
         <div class="content">
@@ -124,14 +124,14 @@ function html(message, id) {
 						<h4 style="text-align:left">
 							Best regards,<br>
 							George <br>
-							The Datapick Team <br>
+							The MagSpy Team <br>
 						</h4>
         </div>
 
 
         <div class="footer">
-						<a href=https://datapick.app/api/users/unsubscribe?user=${id} >Unsubscribe</a>
-            <p>&copy; 2023 Datapick. All rights reserved.</p>
+						<a href=https://MagSpy.app/api/users/unsubscribe?user=${id} >Unsubscribe</a>
+            <p>&copy; 2023 MagSpy. All rights reserved.</p>
         </div>
     </div>
 </body>
@@ -208,7 +208,7 @@ export async function executeActionForm(formData) {
 		for (let i = 0; i < all.length; i++) {
 			await sendEmail({
 				to: all[i].email,
-				subject: "Datapick => MagSpy – Exciting Changes Ahead!",
+				subject: "MagSpy => MagSpy – Exciting Changes Ahead!",
 				from: config.mailgun.fromAdmin,
 				html: html(message, all[i].id),
 			});
@@ -219,7 +219,7 @@ export async function executeActionForm(formData) {
 		// 	await sendEmail(
 		// 		{
 		// 			to: sendTo[i],
-		// 			subject: "Datapick App is Now Ready for Use!",
+		// 			subject: "MagSpy App is Now Ready for Use!",
 		// 			from: config.mailgun.fromAdmin,
 		// 			html: html(message),
 		// 		}
@@ -235,7 +235,7 @@ export async function executeActionForm(formData) {
 			await sendEmail(
 				{
 					to: sendTo[i],
-					subject: "Datapick => MagSpy – Exciting Changes Ahead!",
+					subject: "MagSpy => MagSpy – Exciting Changes Ahead!",
 					from: config.mailgun.fromAdmin,
 					html: html(message),
 				}

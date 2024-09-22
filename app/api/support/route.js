@@ -28,7 +28,7 @@ export async function POST(req) {
   //inform the support requester that the message has been sent
   await sendEmail({
     to: email,
-    subject: "Datapick | Your request has been sent. We will get back to you as soon as possible.",
+    subject: "MagSpy | Your request has been sent. We will get back to you as soon as possible.",
     from: config.mailgun.supportEmail,
     html: `
             <!DOCTYPE html>
@@ -36,7 +36,7 @@ export async function POST(req) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Datapick</title>
+    <title>Welcome to MagSpy</title>
     <style>
         
         body {
@@ -122,7 +122,7 @@ export async function POST(req) {
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://datapick.app/icon.png" alt="Datapick Logo">
+            <img src="https://MagSpy.app/icon.png" alt="MagSpy Logo">
         </div>
         <h1 style="text-align: center;">Support</h1>
 
@@ -132,7 +132,7 @@ export async function POST(req) {
         </div>
 
         <div class="footer">
-            <p>&copy; 2023 Datapick. All rights reserved.</p>
+            <p>&copy; 2023 MagSpy. All rights reserved.</p>
         </div>
     </div>
 </body>

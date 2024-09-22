@@ -59,7 +59,7 @@ const PrivacyPolicy = () => {
         >
           {`Last Updated: September 11, 2024
 
-At Datapick ("we," "our," "us"), we prioritize your privacy and are committed to protecting any personal information you share with us. This Privacy Policy outlines the types of data we collect, how we use it, and the steps we take to safeguard your data. By accessing or using our services, you consent to this Privacy Policy.
+At MagSpy ("we," "our," "us"), we prioritize your privacy and are committed to protecting any personal information you share with us. This Privacy Policy outlines the types of data we collect, how we use it, and the steps we take to safeguard your data. By accessing or using our services, you consent to this Privacy Policy.
 
 1. Information We Collect
 We collect and process various types of data to provide and improve our services. The types of information we collect include:
@@ -82,7 +82,7 @@ Cookies and Tracking Technologies: Cookies, web beacons, and similar technologie
 We use the information we collect in the following ways:
 
 2.1. Service Delivery
-To provide, maintain, and improve the Datapick services.
+To provide, maintain, and improve the MagSpy services.
 To track product prices and notify you when a price drops, as per your preferences.
 To manage your account and provide customer support.
 2.2. Communication
@@ -124,7 +124,7 @@ We use cookies and similar tracking technologies to collect information about yo
 We retain your personal information only as long as necessary to fulfill the purposes outlined in this policy or as required by law. Once your data is no longer needed, we will securely delete or anonymize it.
 
 7. International Data Transfers
-As Datapick is a global service, your personal data may be transferred to, stored, and processed in countries other than your own. By using our services, you consent to the transfer of your data to countries that may have different privacy regulations than your home jurisdiction. We will ensure that any such transfers comply with applicable data protection laws.
+As MagSpy is a global service, your personal data may be transferred to, stored, and processed in countries other than your own. By using our services, you consent to the transfer of your data to countries that may have different privacy regulations than your home jurisdiction. We will ensure that any such transfers comply with applicable data protection laws.
 
 8. Your Rights
 You have specific rights regarding your personal information, including:
@@ -136,16 +136,16 @@ Right to Restrict Processing: You can ask us to limit how we process your data u
 Right to Data Portability: You can request your personal data in a machine-readable format and transfer it to another service.
 Right to Withdraw Consent: Where consent is required, you can withdraw it at any time, though this may impact your use of our services.
 9. Children’s Privacy
-Datapick is not intended for use by children under the age of 18. We do not knowingly collect personal information from children. If we discover that we have collected data from a child without proper parental consent, we will promptly delete that information.
+MagSpy is not intended for use by children under the age of 18. We do not knowingly collect personal information from children. If we discover that we have collected data from a child without proper parental consent, we will promptly delete that information.
 
 10. Changes to This Privacy Policy
-We reserve the right to update or modify this Privacy Policy at any time. If significant changes are made, we will notify you via email or through a prominent notice on our platform. Your continued use of Datapick after such changes constitutes your acceptance of the revised policy.
+We reserve the right to update or modify this Privacy Policy at any time. If significant changes are made, we will notify you via email or through a prominent notice on our platform. Your continued use of MagSpy after such changes constitutes your acceptance of the revised policy.
 
 11. Contact Us
 If you have any questions about this Privacy Policy or your data privacy, please contact us at:
 
 ${config.appName}
-Email: support@mail.datapick.app
+Email: support@mail.MagSpy.app
 
 `}
         </pre>

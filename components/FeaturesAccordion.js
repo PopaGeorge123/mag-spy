@@ -16,7 +16,7 @@ const features = [
     description:
       "We send you automatic email alerts to ensure you never miss a price drop on your favorite products.",
     type: "image",
-    path: `${process.env.NODE_ENV === "development" ? "" : "https://datapick.app"}/emailExample.png`,
+    path: `${process.env.NODE_ENV === "development" ? "" : "https://MagSpy.app"}/emailExample.png`,
     alt: "A computer",
     svg: (
       <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
@@ -32,7 +32,7 @@ const features = [
     description:
       "You can personalise your alerts to receive notifications only when the price drop, rises or is a custom value.",
     type: "image",
-    path: `${process.env.NODE_ENV === "development" ? "" : "https://datapick.app"}/alertsEditExample.png`,
+    path: `${process.env.NODE_ENV === "development" ? "" : "https://MagSpy.app"}/alertsEditExample.png`,
     alt: "A computer",
     svg: (
       <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
@@ -59,7 +59,7 @@ const features = [
     description:
       "We provide you with graphs and charts to help you understand the price trends of the products you are monitoring.",
     type: "image",
-    path: `${process.env.NODE_ENV === "development" ? "" : "https://datapick.app"}/graphsExample.png`,
+    path: `${process.env.NODE_ENV === "development" ? "" : "https://MagSpy.app"}/graphsExample.png`,
     
       svg: (
       <svg className="w-[24px] h-[24px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
