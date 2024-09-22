@@ -7,7 +7,7 @@ import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Pricing from '@/components/Pricing';
-import DemoSection from '@/components/DemoSection'
+// import DemoSection from '@/components/DemoSection'
 
 export default function Home({ searchParams }) {
  const isInDev = false;
@@ -24,7 +24,7 @@ export default function Home({ searchParams }) {
          <Hero />
          <Problem />
          <FeaturesAccordion />
-         <DemoSection />
+         {/* <DemoSection /> */}
          {/* <Testimonials3 /> */}
          {/* <FeaturesGrid/>
          < FeaturesListicle/> */}
