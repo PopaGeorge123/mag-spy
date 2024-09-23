@@ -1,7 +1,7 @@
 {
   "crons": [{
     "path": "/api/updateData?key=29330064&user=geo",
-    "schedule": "0 * * * *"
+    "schedule": "0 */3 * * *" 
   }]
   
 }

@@ -37,7 +37,7 @@ export default function AddedObject({ name, isActive, imageUrl, id ,lastPrice,cu
 							<path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
 						</svg>
 					</a>) : (<></>)}
-					{lastPrice?.toString().length >= 6 ? lastPrice?.toString().slice(0,5) + "..." : lastPrice} {!lastPrice ? "" :currency}
+					{lastPrice} {!lastPrice ? "" :currency}
 				</div>
 			</div>
 		</div>
