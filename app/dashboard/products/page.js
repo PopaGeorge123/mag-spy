@@ -3,10 +3,13 @@ import connectMongo from "@/libs/mongoose";
 import User from "@/models/User";
 import Product from "@/models/Product";
 
+import { track } from '@vercel/analytics/server';
+
 import AddedObject from "@/components/own/dashboard/AddedObject";
 import CreateButton from "@/components/own/dashboard/CreateButton";
 
 export default async function ProductsPage() {
+	track("Dashboard Products Page Viewed");
 	await connectMongo();
 
 	const session = await GetSesion();

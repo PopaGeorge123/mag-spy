@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import Image from "next/image";
+import { track } from '@vercel/analytics';
 
 // The features array is a list of features that will be displayed in the accordion.
 // - title: The title of the feature
@@ -83,6 +84,7 @@ const Item = ({ feature, isOpen, setFeatureSelected }) => {
         onClick={(e) => {
           e.preventDefault();
           setFeatureSelected();
+          track("feature-item-click", { item: title });
         }}
         aria-expanded={isOpen}
       >

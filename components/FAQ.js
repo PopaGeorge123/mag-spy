@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { track } from '@vercel/analytics';
 
 // <FAQ> component is a lsit of <Item> component
 // Just import the FAQ & add your FAQ content to the const faqList
@@ -38,6 +39,7 @@ const Item = ({ item }) => {
         onClick={(e) => {
           e.preventDefault();
           setIsOpen(!isOpen);
+          track("faq-item-click", { item: item.question });
         }}
         aria-expanded={isOpen}
       >

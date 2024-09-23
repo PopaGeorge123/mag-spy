@@ -32,6 +32,7 @@ export default function DemoSection() {
   const executeButtonClick = async () => {
     if (currentStep < 1) {
       setCurrentStep(currentStep + 1);
+      track("Readed Demo Steps")
     } else {
       setIsLoading(true);
       toast.success("Getting data... Be patient");

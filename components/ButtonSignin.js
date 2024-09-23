@@ -5,6 +5,7 @@ import { useSession, signIn } from "next-auth/react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import config from "@/config";
+import { track } from '@vercel/analytics';
 
 // A simple button to sign in with our providers (Google & Magic Links).
 // It automatically redirects user to callbackUrl (config.auth.callbackUrl) after login, which is normally a private page for users to manage their accounts.
@@ -14,6 +15,9 @@ const ButtonSignin = ({ text = "Get started", extraStyle }) => {
   const { data: session, status } = useSession();
 
   const handleClick = () => {
+    track("Signin Button Clicked",{
+      location : "CTA"
+    });
     if (status === "authenticated") {
       router.push(config.auth.callbackUrl);
     } else {
