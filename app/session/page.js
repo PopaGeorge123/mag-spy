@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { addDemoProduct } from "@/libs/API/demo";
 import toast from "react-hot-toast";
+import { track } from '@vercel/analytics';
 
 export default function DemoSection() {
 
@@ -16,7 +17,9 @@ export default function DemoSection() {
     // Get the user's timezone
     const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     setTimezone(userTimezone);
-
+    track('Demo Clicked', {
+      location: 'Hero'
+    });
     //check if user has demo product
     const demoProductId = localStorage.getItem("demoProductId");
     if (demoProductId) {
@@ -29,7 +32,6 @@ export default function DemoSection() {
   const executeButtonClick = async () => {
     if (currentStep < 1) {
       setCurrentStep(currentStep + 1);
-
     } else {
       setIsLoading(true);
       toast.success("Getting data... Be patient");
