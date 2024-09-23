@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
-import TestimonialsAvatars from "./TestimonialsAvatars";
-import config from "@/config";
-import ButtonLead from "./ButtonLead";
+// import TestimonialsAvatars from "./TestimonialsAvatars";
+// import config from "@/config";
+// import ButtonLead from "./ButtonLead";
+import { track } from '@vercel/analytics';
 
 const Hero = () => {
   return (
@@ -19,6 +22,11 @@ const Hero = () => {
         {/* <ButtonLead /> */}
         <a href="/session"
           className="btn btn-primary btn-wide"
+          onClick={() => {
+            track('Demo Clicked', {
+              location: 'Hero'
+            });
+          }}
         >
           Check out the demo
         </a>
