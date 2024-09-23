@@ -13,9 +13,15 @@ export default async function ProductsPage() {
 	const user = await User.findOne({ _id: session.user.id });
 	const productsIds = user?.products;
 
-	const products = await Product.find({
+	const productsData = await Product.find({
 		_id: { $in: productsIds },
 	});
+
+	//sort products by date
+	const products = productsData.sort((a, b) => {
+		return new Date(b.createdAt) - new Date(a.createdAt);
+	});
+
 	
 	return (
 		<>

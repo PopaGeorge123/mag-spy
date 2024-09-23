@@ -39,15 +39,15 @@ export async function addNewProduct(data) {
 			};
 		}
 
-		const name = data.name;
-		const description = data.description;
+		let name;
+
 		const productUrl = data.productUrl;
 		const timezone = data.timezone;
 
-		if (name === "" || description === "" || productUrl === "") {
+		if (productUrl === "") {
 			return {
 				status: "error",
-				message: "Please fill in all fields."
+				message: "Please fill in the field."
 			}
 		}
 
@@ -82,6 +82,7 @@ export async function addNewProduct(data) {
 
 			dataIdRoute = aiData.selector;
 			imageUrl = aiData.imageUrl;
+			name = aiData.name;
 			priceCurrency = aiData.currency;
 
 			responseFromWebsite = await getPriceFromWebsite(productUrl, dataIdRoute);
@@ -115,7 +116,7 @@ export async function addNewProduct(data) {
 		let product = await Product.create({
 			owner: user._id,
 			name,
-			description,
+			// description,
 			productUrl,
 			imageUrl,
 			dataIdRoute,
@@ -163,16 +164,15 @@ export async function EditProduct(data) {
 		const oldProduct = await Product.findOne({ _id: data.productId });
 
 
-		const name = data.name;
-		const description = data.description;
-		const productUrl = data.productUrl;
-		const productId = data.productId;
+		let name = data.name;
+		let productUrl = data.productUrl;
+		let productId = data.productId;
 		let imageUrl = oldProduct.imageUrl;
 		let dataIdRoute = oldProduct.dataIdRoute;
 		let priceCurrency = oldProduct.priceCurrency;
 		let priceHistory = oldProduct.priceHistory;
 
-		if (name === "" || description === "" || productUrl === "") {
+		if (name === "" || productUrl === "") {
 			return {
 				status: "error",
 				message: "Please fill in all fields."
@@ -207,6 +207,7 @@ export async function EditProduct(data) {
 				
 				dataIdRoute = aiData.selector;
 				imageUrl = aiData.imageUrl;
+				name = aiData.name;
 				priceCurrency = aiData.currency;
 
 				responseFromWebsite = await getPriceFromWebsite(productUrl, dataIdRoute);
@@ -232,7 +233,7 @@ export async function EditProduct(data) {
 			{ _id: productId },
 			{
 				name,
-				description,
+				// description,
 				productUrl,
 				imageUrl,
 				dataIdRoute,

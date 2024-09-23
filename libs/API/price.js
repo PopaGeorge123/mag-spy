@@ -62,7 +62,5 @@ export async function getPriceHistory(productId) {
     historyData: formattedData
   };
 
-  console.log("Return Data : ", returnData);
-
   return returnData;
 }

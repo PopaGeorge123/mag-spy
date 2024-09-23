@@ -7,12 +7,12 @@ import { toast } from "react-hot-toast";
 export default function ProductEditForm({ data }) {
   const [isDisabledAndLoading, setIsDisabledAndLoading] = useState(false);
   const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
+  // const [description, setDescription] = useState("");
   const [productUrl, setProductUrl] = useState("");
 
   useEffect(() => {
     setName(data.name);
-    setDescription(data.description);
+    //setDescription(data.description);
     setProductUrl(data.productUrl);
   },[data]);
 
@@ -29,7 +29,8 @@ export default function ProductEditForm({ data }) {
             value={name}
           />
         </div>
-        <div className="mb-5">
+        
+        {/*<div className="mb-5">
           <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Write a description</label>
           <input 
             onChange={(e) => setDescription(e.target.value)}
@@ -38,6 +39,7 @@ export default function ProductEditForm({ data }) {
             value={description}
           />
         </div>
+        */}
         <div className="mb-5">
           <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Link</label>
           <input 
@@ -52,13 +54,16 @@ export default function ProductEditForm({ data }) {
           className="btn btn-primary btn-block"
           onClick={async () => {
             setIsDisabledAndLoading(true);
-            const response = await EditProduct({ name, description, productUrl, productId: data.productId });
+            toast.success("Editing product...");
+            const response = await EditProduct({ name, productUrl, productId: data.productId });
             if(response.status === "error") {
               toast.error(response.message);
             }
             else {
-              toast.success("Product added successfully!");
-              location.href = '/dashboard/products';
+              toast.success("Product edited successfully!");
+              setTimeout(() => {
+                location.href = '/dashboard/products';
+              },2000);
             }
             setIsDisabledAndLoading(false);
           }}

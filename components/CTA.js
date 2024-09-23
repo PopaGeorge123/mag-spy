@@ -28,7 +28,7 @@ const CTA = () => {
           {/* <ButtonLead /> */}
           {/* <p className="m-2">or</p>
           <ButtonSignin extraStyle="btn-primary" /> */}
-          <ButtonSignin text="Try it now for free !" extraStyle="btn-primary" />
+          <ButtonSignin text="Try MagSpy now for free !" extraStyle="btn-primary" />
           
         </div>
       </div>

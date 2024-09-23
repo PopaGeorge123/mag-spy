@@ -67,12 +67,20 @@ export async function getDataFromAI(website) {
    - Determine the currency of the product from the HTML content.
    - Extract the currency information using XPath or identify the relevant text or attribute that indicates the currency.
 
+4. **Product Name Extraction**:
+    - Extract the name of the product using a CSS selector that targets the product name element.
+    - Ensure the name is clear and corresponds to the main product title.
+    - Avoid extracting any additional information such as product descriptions or reviews.
+
+
+
 Return the extracted data in the following JSON format:
 \`\`\`json
 {
   "selector": "<CSS_SELECTOR_FOR_PRICE_EXTRACTION>",
   "imageUrl": "<PRODUCT_IMAGE_URL>",
-  "currency": "<PRODUCT_CURRENCY>"
+  "currency": "<PRODUCT_CURRENCY>",
+  "name: "<PRODUCT_NAME>"
 }
 \`\`\`
 `;
