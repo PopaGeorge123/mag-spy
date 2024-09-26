@@ -41,6 +41,10 @@ const Header = () => {
       href: "/support",
       label: "Need Help",
     },
+    {
+      href: "/blog",
+      label: "Blog",
+    },
   ];
 
   // setIsOpen(false) when the route changes (i.e: when the user clicks on a link on mobile)

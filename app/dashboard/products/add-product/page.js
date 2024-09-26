@@ -16,7 +16,7 @@ export default async function AddProductPage() {
   return (
     <div>
       {!user?.hasAccess && user?.products.length >= 1 ? <FreePlanAlert forWhat={"product"}/> : null}
-      <h1 className="text-2xl">Add your Product</h1>
+      <h1 className="text-2xl">Adauga produs</h1>
 
       <ProductCreateForm />
 

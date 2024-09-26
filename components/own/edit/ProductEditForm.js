@@ -69,7 +69,7 @@ export default function ProductEditForm({ data }) {
           }}
           disabled={isDisabledAndLoading}
         >
-          {isDisabledAndLoading ? "Editing product..." : "Edit product"}
+          {isDisabledAndLoading ? "Se modifica produsul..." : "Modifica produsul"}
           {isDisabledAndLoading ? (
             <span className="loading loading-spinner loading-xs"></span>
           ) : (

@@ -23,7 +23,7 @@ export default async function AddProductPage({ params: { productId } }) {
         <DeleteProductDialogue productId={productId} />
       </div>
 
-      <h1 className="text-2xl m-5">Edit <span className='text-white'>{productData.name}</span></h1>
+      <h1 className="text-2xl m-5">Modifica <span className='text-white'>{productData.name}</span></h1>
 
       <ProductEditForm data={data} />
 

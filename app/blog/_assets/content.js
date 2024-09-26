@@ -1,6 +1,10 @@
 import Image from "next/image";
-import marcImg from "@/app/blog/_assets/images/authors/marc.png";
-import introducingSupabaseImg from "@/public/blog/introducing-supabase/header.png";
+import georgeImg from "@/app/blog/_assets/images/authors/george.png";
+import introducingSupabaseImg from "@/public/blog/introducere-magspy/header.png";
+import createAccountImg from "@/public/blog/introducere-magspy/create-account.png";
+import addProductImg from "@/public/blog/introducere-magspy/adaugare-produs.png";
+import alertsEditExampleImg from "@/public/blog/introducere-magspy/alerts-edit-example.png";
+import graphExampleImg from "@/public/blog/introducere-magspy/graph-example.png";
 
 // ==================================================================================================================================================================
 // BLOG CATEGORIES 🏷️
@@ -23,9 +27,9 @@ export const categories = [
     titleShort: "Features",
     // The description of the category to display in the category page. Up to 160 characters.
     description:
-      "Here are the latest features we've added to ShipFast. I'm constantly improving our product to help you ship faster.",
+      "Aici gasesti ultimele functionalitati adaugate in aplicatia MagSpy.",
     // A short version of the description above, only displayed in the <Header /> on mobile. Up to 60 characters.
-    descriptionShort: "Latest features added to ShipFast.",
+    descriptionShort: "Ultimele imbunatatiri adaugate aplicatiei MagSpy.",
   },
   {
     slug: categorySlugs.tutorial,
@@ -47,22 +51,10 @@ const socialIcons = {
   twitter: {
     name: "Twitter",
     svg: (
-      <svg
-        version="1.1"
-        id="svg5"
-        x="0px"
-        y="0px"
-        viewBox="0 0 1668.56 1221.19"
-        className="w-9 h-9"
-        // Using a dark theme? ->  className="w-9 h-9 fill-white"
-      >
-        <g id="layer1" transform="translate(52.390088,-25.058597)">
-          <path
-            id="path1009"
-            d="M283.94,167.31l386.39,516.64L281.5,1104h87.51l340.42-367.76L984.48,1104h297.8L874.15,558.3l361.92-390.99   h-87.51l-313.51,338.7l-253.31-338.7H283.94z M412.63,231.77h136.81l604.13,807.76h-136.81L412.63,231.77z"
-          />
-        </g>
+      <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z" />
       </svg>
+
     ),
   },
   linkedin: {
@@ -91,44 +83,48 @@ const socialIcons = {
       </svg>
     ),
   },
+  instagram: {
+    name: "Instagram",
+    svg: (
+      <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path fill="currentColor" fill-rule="evenodd" d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z" clip-rule="evenodd" />
+      </svg>
+
+    ),
+  }
 };
 
 // These slugs are used to generate pages in the /blog/author/[authorId].js. It's a way to show all articles from an author.
 const authorSlugs = {
-  marc: "marc",
+  ceo: "owner",
 };
 
 // All the blog authors data display in the /blog/author/[authorId].js pages.
 export const authors = [
   {
     // The slug to use in the URL, from the authorSlugs object above.
-    slug: authorSlugs.marc,
+    slug: authorSlugs.ceo,
     // The name to display in the author's bio. Up to 60 characters.
-    name: "Marc Lou",
+    name: "George Popa",
     // The job to display in the author's bio. Up to 60 characters.
-    job: "Maker of ByeDispute",
+    job: "Dezvoltator MagSpy",
     // The description of the author to display in the author's bio. Up to 160 characters.
     description:
-      "Marc is a developer and an entrepreneur. He's built 20 startups in the last 3 years. 6 were profitable and 3 were acquired. He's currently building ByeDispute, the #1 Stripe Chargebacks Protection tool.",
+      "George este dezvoltatorul principal al aplicatiei MagSpy. El se ocupa de imbunatatirea aplicatiei si de adaugarea de noi functionalitati.",
     // The avatar of the author to display in the author's bio and avatar badge. It's better to use a local image, but you can also use an external image (https://...)
-    avatar: marcImg,
+    avatar: georgeImg,
     // A list of social links to display in the author's bio.
     socials: [
       {
         name: socialIcons.twitter.name,
         icon: socialIcons.twitter.svg,
-        url: "https://twitter.com/marc_louvion",
+        url: "https://x.com/GeorgePopa02",
       },
       {
-        name: socialIcons.linkedin.name,
-        icon: socialIcons.linkedin.svg,
-        url: "https://www.linkedin.com/in/marclouvion/",
-      },
-      {
-        name: socialIcons.github.name,
-        icon: socialIcons.github.svg,
-        url: "https://github.com/Marc-Lou-Org/ship-fast",
-      },
+        name: socialIcons.instagram.name,
+        icon: socialIcons.instagram.svg,
+        url: "https://x.com/GeorgePopa02",
+      }
     ],
   },
 ];
@@ -154,25 +150,25 @@ const styles = {
 export const articles = [
   {
     // The unique slug to use in the URL. It's also used to generate the canonical URL.
-    slug: "introducing-supabase",
+    slug: "ce-este-magspy",
     // The title to display in the article page (h1). Less than 60 characters. It's also used to generate the meta title.
-    title: "Introducing Supabase to ShipFast",
+    title: "Ce este MagSpy?",
     // The description of the article to display in the article page. Up to 160 characters. It's also used to generate the meta description.
     description:
-      "Supabase is an open-source Firebase alternative. It's a great tool for building a backend for your app. It's now integrated with ShipFast!",
+      "MagSpy este o aplicatie care te ajuta sa monitorizezi preturile produselor tale favorite.",
     // An array of categories of the article. It's used to generate the category badges, the category filter, and more.
     categories: [
-      categories.find((category) => category.slug === categorySlugs.feature),
+      categories.find((category) => category.slug === categorySlugs.tutorial),
     ],
     // The author of the article. It's used to generate a link to the author's bio page.
-    author: authors.find((author) => author.slug === authorSlugs.marc),
+    author: authors.find((author) => author.slug === authorSlugs.ceo),
     // The date of the article. It's used to generate the meta date.
-    publishedAt: "2023-11-20",
+    publishedAt: "2024-09-26",
     image: {
       // The image to display in <CardArticle /> components.
       src: introducingSupabaseImg,
       // The relative URL of the same image to use in the Open Graph meta tags & the Schema Markup JSON-LD.
-      urlRelative: "/blog/introducing-supabase/header.jpg",
+      urlRelative: "/blog/introducere-magspy/header.jpg",
       alt: "Supabase and ShipFast logo combined",
     },
     // The actual content of the article that will be shown under the <h1> title in the article page.
@@ -188,55 +184,113 @@ export const articles = [
           placeholder="blur"
         />
         <section>
-          <h2 className={styles.h2}>Introduction</h2>
+          <h2 className={styles.h2}>Introducere</h2>
           <p className={styles.p}>
-            Supabase is an open-source Firebase alternative. It&apos;s a great
-            tool for building a backend for your app. It&apos;s now integrated
-            with ShipFast!
+            MagSpy este o aplicatie care te ajuta sa monitorizezi preturile
+            produselor tale favorite. In acest tutorial, vei invata cum sa
+            utilizezi aplicatia si cum sa monitorizezi preturile produselor
+            tale favorite.
           </p>
         </section>
 
         <section>
-          <h3 className={styles.h3}>1. Create a supabase account</h3>
+          <h3 className={styles.h3}>1. Creaza un cont MagSpy</h3>
           <p className={styles.p}>
-            First, go to{" "}
-            <a href="https://supabase.com/" className="link link-primary">
-              Supabase
+            Pentru inceput du-te la{" "}
+            <a href="https://magspy.app" className="link link-primary">
+              MagSpy
             </a>{" "}
-            and create an account. It&apos;s free for up to 10,000 rows per
-            table.
+            si creaza-ti un cont. Poti sa te conectezi cu Google sau doar utilizand mail-ul tau.
             <br />
-            Then create a new project and a new table. You can use the following
-            SQL schema:
+            Este gratuit si nu necesita card de credit.
+            <br />
+            <Image
+              src={createAccountImg}
+              alt="Image Showing how to create an account on MagSpy"
+              width={700}
+              height={500}
+              priority={true}
+              className="rounded-box my-5"
+              placeholder="blur"
+            />
+            Dupa ce te-ai inregistrat, vei fi redirectionat catre tabloul de bord al aplicatiei.
           </p>
-
-          <pre className={styles.code}>
-            <code>
-              {`CREATE TABLE public.users (
-  id bigint NOT NULL DEFAULT nextval('users_id_seq'::regclass),
-  email text NOT NULL,
-  password text NOT NULL,
-  created_at timestamp with time zone NOT NULL DEFAULT now(),
-  updated_at timestamp with time zone NOT NULL DEFAULT now(),
-  CONSTRAINT users_pkey PRIMARY KEY (id)
-);`}
-            </code>
-          </pre>
         </section>
 
         <section>
-          <h3 className={styles.h3}>2. Add your credentials to ShipFast</h3>
+          <h3 className={styles.h3}>2. Cauta produsul dorit</h3>
           <p className={styles.p}>
-            Copy the <span className={styles.codeInline}>API URL</span> and{" "}
-            <span className={styles.codeInline}>API Key</span> from your
-            Supabase project settings and add them to your ShipFast project
-            settings. Add these files to your project:
+            Începeți prin a vizita platforma preferată de cumpărături online. Răsfoiți printre produse până când găsiți un articol pe care sunteți interesat să îl urmăriți, cum ar fi un obiect gadget, un articol de îmbrăcăminte sau un produs de uz casnic.
+            <br />
+            Asigurați-vă că alegeți un magazin de renume pentru cele mai bune rezultate.
+            <br />
+          </p>
+        </section>
+
+        <section>
+          <h3 className={styles.h3}>3. Adauga produsul in MagSpy</h3>
+          <p className={styles.p}>
+            Dupa ce ai gasit produsul dorit, copiaza link-ul produsului si adauga-l in aplicatia MagSpy.
+            <br />
+            <br />
+            Poti sa urmezi urmatorii pasi:
           </p>
 
           <ul className={styles.ul}>
-            <li className={styles.li}>.env.local</li>
-            <li className={styles.li}>.env.production</li>
+            <li className={styles.li}> Copiaza linkul produsului din bara de navigatie</li>
+            <li className={styles.li}> Lipeste linkul in casuta alaturata si apasa butonul "Adauga Un Produs". MagSpy va adauga automat produsul si va incepe monitorizarea. </li>
+            <Image
+              src={addProductImg}
+              alt="Image Showing how to add a product on MagSpy"
+              width={700}
+              height={500}
+              priority={true}
+              className="rounded-box my-5 border"
+              placeholder="blur"
+            />
+
+            <li className={styles.li}> MagSpy va genera automat o alerta conditionata. Este recomandat sa creezi alerte conditionate astfel sa fii notificat atunci cand consideri ca este cel mai important. </li>
+            <Image
+              src={alertsEditExampleImg}
+              alt="Image Showing how to add a product on MagSpy"
+              width={700}
+              height={500}
+              priority={true}
+              className="rounded-box my-5 border"
+              placeholder="blur"
+            />
           </ul>
+          <p className={styles.p}>
+            Dupa ce ai adaugat produsul in aplicatie, MagSpy va monitoriza pretul produsului si te va notifica conform alertelor conditionate create.
+
+          </p>
+        </section>
+
+        <section>
+          <h3 className={styles.h3}>4. Monitorizeaza pretul produsului</h3>
+          <p className={styles.p}>
+            Felicitari! <br />
+            Ai adaugat primul tau produs in aplicatie. Acum poti sa te bucuri de timpul tau petrecut eficient si sa lasi MagSpy sa monitorizeze pretul produsului pentru tine.
+            <br />
+            Cu ajtorul graficelor vei fi la curent cu pretul produsului si vei avea o imagine de ansamblu asupra evolutiei acestuia in timp.
+          </p>
+          <Image
+            src={graphExampleImg}
+            alt="Image Showing a graph example on MagSpy"
+            width={700}
+            height={500}
+            priority={true}
+            className="rounded-box my-5"
+            placeholder="blur"
+          />
+        </section>
+
+        <section>
+          <h3 className={styles.h3}>Concluzie</h3>
+          <p className={styles.p}>
+            Ai invatat cum sa utilizezi aplicatia MagSpy si cum sa monitorizezi preturile produselor tale favorite. <br />
+
+          </p>
         </section>
       </>
     ),

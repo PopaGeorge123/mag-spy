@@ -65,7 +65,7 @@ export default function ProductCreateForm() {
           }}
           disabled={isDisabledAndLoading}
         >
-          {isDisabledAndLoading ? "Adding product..." : "Add product"}
+          {isDisabledAndLoading ? "Se adauga produsul..." : "Adauga un produs"}
           {isDisabledAndLoading ? (
             <span className="loading loading-spinner loading-xs"></span>
           ) : (

@@ -18,7 +18,7 @@ const links = [
 ];
 
 const cta = (
-  <ButtonSignin text="Prevent disputes" extraStyle="btn-primary md:btn-sm" />
+  <ButtonSignin text="Incearca MagSpy" extraStyle="btn-primary md:btn-sm" />
 );
 
 const ButtonPopoverCategories = () => {
@@ -207,7 +207,7 @@ const HeaderBlog = () => {
             </a>
           ))}
 
-          <ButtonPopoverCategories />
+          {/* <ButtonPopoverCategories /> */}
         </div>
 
         {/* CTA on large screens */}
