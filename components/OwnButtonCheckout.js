@@ -38,8 +38,8 @@ const OwnButtonCheckout = ({ priceId, mode = "subscription" }) => {
       {isLoading ? (
         <span className="loading loading-spinner loading-xs"></span>
       ) : (null
-      )}
-      Upgrade Now
+      )} 
+      Încearcă Premium
     </button>
   );
 };
