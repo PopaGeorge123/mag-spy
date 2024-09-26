@@ -25,15 +25,15 @@ const config = {
             ? "price_1Niyy5AxyNprDp7iZIqEyD2h"
             : "price_456",
         //  REQUIRED - Name of the plan, displayed on the pricing page
-        name: "Starter",
+        name: "Începător",
         // A friendly description of the plan, displayed on the pricing page. Tip: explain why this plan and not others
-        description: "Test this app for free",
+        description: "Testați această aplicație gratuit",
         // The price you want to display, the one user will be charged on Stripe.
         price: 0,
         // If you have an anchor price (i.e. $29) that you want to display crossed out, put it here. Otherwise, leave it empty
         features: [
-          { name: "Track 1 product",},
-          { name: "Email notifications" },
+          { name: "Monitorizati 1 produs",},
+          { name: "Notificari pe Email" },
           // { name: "1 customised alert" },
         ],
       },
@@ -45,13 +45,13 @@ const config = {
             ? "price_1PqtBlLcXwqt5lPFnKcVXvxO"
             : "price_1PwlGMLcXwqt5lPFCBrlvQTA",
         name: "Business",
-        description: "You are an entrepreneur, you know what you are doing",
+        description: "Ai nevoie de mai multă putere",
         price: 12,
         priceAnchor: 17,
         features: [
-          {name: "Unlimited products",},
-          { name: "Unlimited alerts" },
-          { name: "Email notifications" },
+          {name: "Produse nelimitate",},
+          { name: "Alerte personalizate nelimitate" },
+          { name: "Notificari pe Email" },
         ],
       },
       // {

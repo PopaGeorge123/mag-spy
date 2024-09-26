@@ -18,7 +18,7 @@ export default async function AlertsPage() {
 
 	return (
 		<>
-			<h1 className="text-2xl">Your Inbox</h1>
+			<h1 className="text-2xl">Istoricul alertelor tale</h1>
 			<div className="mt-5">
 				<AlertComponent alertData={inbox_alerts} />
 			</div>

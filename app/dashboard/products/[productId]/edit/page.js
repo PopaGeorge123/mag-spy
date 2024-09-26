@@ -29,7 +29,8 @@ export default async function AddProductPage({ params: { productId } }) {
 
     </div>) :
       (<div className="flex justify-center items-center h-96">
-        <h1 className="text-2xl text-gray-500">This product is not available anymore in the free plan. Please upgrade to manage this product.</h1>
+        <h1 className="text-2xl text-gray-500">Acest produs nu mai este disponibil în planul gratuit. Vă rugăm să faceți upgrade pentru a gestiona acest produs.
+        </h1>
       </div>)
   )
 }

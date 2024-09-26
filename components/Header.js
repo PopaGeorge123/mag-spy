@@ -14,9 +14,9 @@ import config from "@/config";
 let cta;
 
 if(process.env.NODE_ENV === "development") {
-  cta = <ButtonSignin extraStyle="btn-primary" />
+  cta = <ButtonSignin text="Începe acum" extraStyle="btn-primary" />
 }else{
-  cta = <ButtonSignin extraStyle="btn-primary" />
+  cta = <ButtonSignin text="Începe acum" extraStyle="btn-primary" />
 }
 
 
@@ -31,7 +31,7 @@ const Header = () => {
   const links = [
     {
       href: "/support",
-      label: "Need Help",
+      label: "Ajutor",
     },
     {
       href: "/#faq",
@@ -39,7 +39,7 @@ const Header = () => {
     },
     {
       href: "/#pricing",
-      label: "Pricing",
+      label: "Preturi",
     },
     {
       href: "/blog",

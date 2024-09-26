@@ -36,7 +36,7 @@ export default async function Blog() {
         ))}
       </section>
 
-      <section>
+      {/* <section>
         <p className="font-bold text-2xl lg:text-4xl tracking-tight text-center mb-8 md:mb-12">
           Browse articles by category
         </p>
@@ -46,7 +46,7 @@ export default async function Blog() {
             <CardCategory key={category.slug} category={category} tag="div" />
           ))}
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

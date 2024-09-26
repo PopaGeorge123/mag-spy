@@ -8,22 +8,19 @@ import { track } from '@vercel/analytics';
 
 const faqList = [
   {
-    question: "What do I get exactly?",
-    answer: <div className="space-y-2 leading-relaxed">You get a tool that helps you track the prices of your favorite products. You can set up alerts and get notified when the price drops. You can also see the price history of the products you are tracking.</div>,
+    question: "Ce primesc mai exact?",
+    answer: <div className="space-y-2 leading-relaxed">Obțineți un instrument care vă ajută să urmăriți prețurile produselor preferate. Puteți configura alerte și puteți primi notificări când prețul scade. De asemenea, puteți vedea istoricul prețurilor produselor pe care le urmăriți.</div>,
   },
   {
-    question: "Can I get a refund?",
+    question: "Pot primi o rambursare?",
     answer: (
-      <p>
-        Yes! You can request a refund within 7 days of your purchase. Reach out
-        by email.
-      </p>
+      <p> Da! Puteți solicita o rambursare în termen de 7 zile de la achiziție. Contactați prin e-mail sau <span><a className="text-white text-bold" href="/support">aici</a></span>.</p>
     ),
   },
   {
-    question: "How does this app checks the prices?",
+    question: "Cum verifică această aplicație prețurile?",
     answer: (
-      <div className="space-y-2 leading-relaxed">We use advanced algorithms to get the prices of the products you are tracking. We also use the latest technologies to make sure the prices are accurate.</div>
+      <div className="space-y-2 leading-relaxed">Folosim algoritmi avansați pentru a obține prețurile produselor pe care le monitorizati. De asemenea, folosim cele mai noi tehnologii pentru a ne asigura că prețurile sunt corecte.</div>
     ),
   },
 ];
@@ -96,7 +93,7 @@ const FAQ = () => {
         <div className="flex flex-col text-left basis-1/2">
           <p className="inline-block font-semibold text-primary mb-4">FAQ</p>
           <p className="sm:text-4xl text-3xl font-extrabold text-base-content">
-            Frequently Asked Questions
+          Întrebări frecvente
           </p>
         </div>
 

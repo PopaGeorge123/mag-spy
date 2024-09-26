@@ -21,7 +21,7 @@ export default function ProductEditForm({ data }) {
       className="max-w-sm mx-auto"
     >
         <div className="mb-5">
-          <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name your product</label>
+          <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Numele Produsului</label>
           <input 
             onChange={(e) => setName(e.target.value)}
             type="text" 

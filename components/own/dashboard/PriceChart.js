@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { getPriceHistory } from "@/libs/API/price";
-import { se } from 'date-fns/locale';
 
 // Dynamically import the ReactApexChart component with no SSR
 const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
@@ -81,7 +80,7 @@ export default function PriceChart({ productId }) {
     },
     series: [
       {
-        name: "Price",
+        name: "Preț",
         data: prices,
         color: "#1A56DB",
       },
@@ -108,7 +107,7 @@ export default function PriceChart({ productId }) {
       <div className="flex justify-between">
         <div>
           <h5 className="leading-none text-3xl font-bold text-gray-900 dark:text-white pb-2">{prices[prices.length-1]} {dates.length === 0 ? "" : productData.currency}</h5>
-          <p className="text-base font-normal text-gray-500 dark:text-gray-400">Price graph </p>
+          <p className="text-base font-normal text-gray-500 dark:text-gray-400">Pretul actual</p>
         </div>
         <div className="flex items-center px-2.5 py-0.5 text-base font-semibold text-green-500 dark:text-green-500 text-center">
           {/* {grow_percent} */}
@@ -123,7 +122,7 @@ export default function PriceChart({ productId }) {
             <div className="w-10 h-10 border-2 border-t-2 border-gray-200 rounded-full animate-spin">
               <h1>.</h1>
             </div>
-            <h1 className='m-5'>No data yet!</h1>
+            <h1 className='m-5'>Nu există date încă !</h1>
           </div>
         ) : (
           <ReactApexChart options={options} series={options.series} type="area" height="300%" width="100%" />

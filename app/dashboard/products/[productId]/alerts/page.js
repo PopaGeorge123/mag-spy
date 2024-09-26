@@ -34,7 +34,7 @@ export default async function AlertsPage({ params: { productId } }) {
 		
 		isAvailable ?	(<div className="flex flex-col justify-center items-center">
 				<div className="mt-5">
-					<h1 className="m-2">Price Alerts</h1>
+					<h1 className="m-2">Alerte de Pret</h1>
 					<div className="my-5 w-full flex items-center justify-end">
 						<CreateButton location={"alerts/create"} />
 					</div>

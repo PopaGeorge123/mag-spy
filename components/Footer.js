@@ -40,7 +40,7 @@ const Footer = () => {
           <div className="flex-grow flex flex-wrap justify-center -mb-10 md:mt-0 mt-10 text-center">
             <div className="lg:w-1/3 md:w-1/2 w-full px-4">
               <div className="footer-title font-semibold text-base-content tracking-widest text-sm md:text-left mb-3">
-                LINKS
+              LINK-URI WEB
               </div>
 
               <div className="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm">
@@ -51,11 +51,11 @@ const Footer = () => {
                     className="link link-hover"
                     aria-label="Contact Support"
                   >
-                    Support
+                    Suport
                   </a>
                 )}
                 <a href="/#pricing" className="link link-hover">
-                  Pricing
+                  Prețuri
                 </a>
                 {/* <a href="/blog" className="link link-hover">
                   Blog
@@ -68,15 +68,15 @@ const Footer = () => {
 
             <div className="lg:w-1/3 md:w-1/2 w-full px-4">
               <div className="footer-title font-semibold text-base-content tracking-widest text-sm md:text-left mb-3">
-                LEGAL
+                LEGALE
               </div>
 
               <div className="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm">
                 <a href="/terms" className="link link-hover">
-                  Terms and conditions
+                  Termeni și condiții
                 </a>
                 <a href="/privacy-policy" className="link link-hover">
-                  Privacy policy
+                  Politica de confidențialitate
                 </a>
               </div>
             </div>

@@ -19,7 +19,7 @@ const Pricing = async () => {
         <div className="flex flex-col text-center w-full mb-20">
           <p className="font-medium text-primary mb-8">Pricing</p>
           <h2 className="font-bold text-3xl lg:text-5xl tracking-tight">
-            Save hours of repetitive price check and spend time wisely!
+          Scăpați de verificările repetate ale prețurilor și folosiți-vă timpul mai eficient!
           </h2>
         </div>
 
@@ -100,7 +100,7 @@ const Pricing = async () => {
                     <a href={currentPlanIndex === 0 && !user ? "/api/auth/signin?callbackUrl=%2Fdashboard%2Fproducts" : "#"}
                       className="border btn text-center w-full"
                     >
-                      {currentPlanIndex === 0 && !user ? `Get ${config.appName} for free` : `Current plan`}
+                      {currentPlanIndex === 0 && !user ? `Obţine ${config.appName} gratuit` : `Planul curent`}
                     </a>
                   ) : (
                     <ButtonCheckout priceId={plan.priceId} />

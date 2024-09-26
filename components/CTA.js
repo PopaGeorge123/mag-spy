@@ -16,10 +16,10 @@ const CTA = () => {
       <div className="relative hero-content text-center text-neutral-content p-8">
         <div className="flex flex-col items-center max-w-xl p-8 md:p-0">
           <h2 className="text-white font-bold text-4xl md:text-5xl tracking-tight mb-8 md:mb-12">
-            Get notified now!
+          Începeți să urmăriți acum!
           </h2>
           <p className="text-white text-lg opacity-80 mb-12 md:mb-16">
-            Don&apos;t waste time surfing the web for the best deals. We&apos;ll do it for you!
+            Nu pierdeți timpul navigând pe web pentru cele mai bune oferte. O vom face pentru tine!
           </p>
 
           {/* <button className="btn btn-primary btn-wide">
@@ -28,7 +28,7 @@ const CTA = () => {
           {/* <ButtonLead /> */}
           {/* <p className="m-2">or</p>
           <ButtonSignin extraStyle="btn-primary" /> */}
-          <ButtonSignin text="Try MagSpy now for free !" extraStyle="btn-primary" />
+          <ButtonSignin text="Încercați acum MagSpy gratuit!" extraStyle="btn-primary" />
           
         </div>
       </div>

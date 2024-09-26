@@ -6,9 +6,9 @@ export default async function AlertsTable({ data }) {
 
 	const alertLabel = [
 		"Status",
-		"Alert",
-		"when price",
-		"price",
+		"Alerta",
+		"cand pretul",
+		"pret",
 		" "
 	];
 
@@ -29,7 +29,7 @@ export default async function AlertsTable({ data }) {
 					<tbody>
 						{data.length === 0 ? (
 							<tr>
-								<td colSpan="5" className="text-center py-4">No alerts</td>
+								<td colSpan="5" className="text-center py-4">Nu exista alerte</td>
 							</tr>
 						) : (
 							data.map((item, key) => (
@@ -41,7 +41,7 @@ export default async function AlertsTable({ data }) {
 										{item.name}
 									</td>
 									<td className="py-4 whitespace-nowrap">
-									{item.typeof === "1" ? "Below" : item.typeof === "2" ? "Equal" : "Above"}
+									{item.typeof === "1" ? "Mai mic" : item.typeof === "2" ? "Egal cu" : "Mai mare"}
 									</td>
 									<td className="py-4 whitespace-nowrap">
 										{item.priceValue}

@@ -44,22 +44,22 @@ const Problem = () => {
     <section className="bg-neutral text-neutral-content">
       <div className="max-w-7xl mx-auto px-8 py-16 md:py-32 text-center">
         <h2 className="max-w-3xl mx-auto font-extrabold text-4xl md:text-5xl tracking-tight mb-6 md:mb-8">
-          You can&apos;t monitor price changes 24/7
+          Nu puteți monitoriza modificările prețurilor 24/7
         </h2>
         <p className="max-w-xl mx-auto text-lg opacity-90 leading-relaxed mb-12 md:mb-20">
-          Constantly monitoring fluctuating prices is exhausting and impractical
+        Monitorizarea constantă a prețurilor fluctuante este obositoare și nepractică
         </p>
 
         <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-6">
-          <Step emoji="🧑‍💻" text="Check price very soon" />
+          <Step emoji="🧑‍💻" text="Verifici prețul foarte des" />
 
           <Arrow extraStyle="max-md:-scale-x-100 md:-rotate-90" />
 
-          <Step emoji="😮‍💨" text="You lose focus" />
+          <Step emoji="😮‍💨" text="Pierzi focusul" />
 
           <Arrow extraStyle="md:-scale-x-100 md:-rotate-90" />
 
-          <Step emoji="😔" text="Even you tried your best, you failed" />
+          <Step emoji="😔" text="Desi ai încercat tot posibilul, ai eșuat !" />
         </div>
       </div>
     </section>

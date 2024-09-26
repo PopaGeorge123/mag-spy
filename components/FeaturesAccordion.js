@@ -13,12 +13,12 @@ import { track } from '@vercel/analytics';
 // - alt: The alt text of the image (if type is 'image')
 const features = [
   {
-    title: "Alerts",
+    title: "Alerte",
     description:
-      "We send you automatic email alerts to ensure you never miss a price drop on your favorite products.",
+      "Recepționați notificări detaliate prin e-mail în momentul în care apar modificări de preț pentru produsele selectate, asigurându-vă astfel că rămâneți mereu la curent cu cele mai recente ajustări de tarife și oferte avantajoase.",
     type: "image",
     path: `${process.env.NODE_ENV === "development" ? "" : "https://MagSpy.app"}/emailExample.png`,
-    alt: "A computer",
+    alt: "Alert email example",
     svg: (
       <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
         <path d="M11.209 3.816a1 1 0 0 0-1.966.368l.325 1.74a5.338 5.338 0 0 0-2.8 5.762l.276 1.473.055.296c.258 1.374-.228 2.262-.63 2.998-.285.52-.527.964-.437 1.449.11.586.22 1.173.75 1.074l12.7-2.377c.528-.1.418-.685.308-1.27-.103-.564-.636-1.123-1.195-1.711-.606-.636-1.243-1.306-1.404-2.051-.233-1.085-.275-1.387-.303-1.587-.009-.063-.016-.117-.028-.182a5.338 5.338 0 0 0-5.353-4.39l-.298-1.592Z" />
@@ -29,9 +29,9 @@ const features = [
     ),
   },
   {
-    title: "Customise Alerts",
+    title: "Personalizare alerte",
     description:
-      "You can personalise your alerts to receive notifications only when the price drop, rises or is a custom value.",
+      "Aveți posibilitatea de a personaliza în detaliu alertele, astfel încât să primiți notificări doar pentru fluctuațiile de preț care corespund intereselor dumneavoastră. Puteți defini praguri de preț specifice și ajusta frecvența de primire a notificărilor, pentru a fi informat doar atunci când prețurile ating valorile dorite.",
     type: "image",
     path: `${process.env.NODE_ENV === "development" ? "" : "https://MagSpy.app"}/alertsEditExample.png`,
     alt: "A computer",
@@ -44,9 +44,9 @@ const features = [
     ),
   },
   {
-    title: "AI Technology",
+    title: "Tehnologie AI",
     description:
-      "We use AI to get the data about the products you want to monitor. This ensures you get the most accurate and up-to-date information.",
+      "Utilizăm inteligența artificială pentru a colecta și analiza datele referitoare la produsele pe care doriți să le monitorizați, garantând astfel accesul la cele mai precise și actualizate informații disponibile. Acest proces avansat asigură o monitorizare continuă și detaliată, oferindu-vă un avantaj competitiv în luarea deciziilor de cumpărare.",
       svg: (
       <svg className="w-[24px] h-[24px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"  viewBox="0 0 24 24">
         <path fillRule="evenodd" d="M17.44 3a1 1 0 0 1 .707.293l2.56 2.56a1 1 0 0 1 0 1.414L18.194 9.78 14.22 5.806l2.513-2.513A1 1 0 0 1 17.44 3Zm-4.634 4.22-9.513 9.513a1 1 0 0 0 0 1.414l2.56 2.56a1 1 0 0 0 1.414 0l9.513-9.513-3.974-3.974ZM6 6a1 1 0 0 1 1 1v1h1a1 1 0 0 1 0 2H7v1a1 1 0 1 1-2 0v-1H4a1 1 0 0 1 0-2h1V7a1 1 0 0 1 1-1Zm9 9a1 1 0 0 1 1 1v1h1a1 1 0 1 1 0 2h-1v1a1 1 0 1 1-2 0v-1h-1a1 1 0 1 1 0-2h1v-1a1 1 0 0 1 1-1Z" clipRule="evenodd" />
@@ -56,9 +56,9 @@ const features = [
     ),
   },
   {
-    title: "Graphs and Charts",
+    title: "Grafice și diagrame",
     description:
-      "We provide you with graphs and charts to help you understand the price trends of the products you are monitoring.",
+      "Vă punem la dispoziție grafice și diagrame interactive, concepute pentru a vă oferi o perspectivă clară asupra tendințelor de preț ale produselor pe care le monitorizați. Aceste instrumente vizuale vă ajută să analizați fluctuațiile în timp real și să identificați cele mai bune momente pentru achiziție.",
     type: "image",
     path: `${process.env.NODE_ENV === "development" ? "" : "https://MagSpy.app"}/graphsExample.png`,
     
@@ -166,9 +166,9 @@ const FeaturesAccordion = () => {
     >
       <div className="px-8">
         <h2 className="font-extrabold text-4xl lg:text-6xl tracking-tight mb-12 md:mb-24">
-          All you need to monitor prices and purchase
+            Tot ce ai nevoie pentru a monitoriza prețurile
           <span className="bg-neutral text-neutral-content px-2 md:px-4 ml-1 md:ml-1.5 leading-relaxed whitespace-nowrap">
-            at the best
+          eficient
           </span>
         </h2>
         <div className=" flex flex-col md:flex-row gap-12 md:gap-24">

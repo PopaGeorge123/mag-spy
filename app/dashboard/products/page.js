@@ -28,7 +28,7 @@ export default async function ProductsPage() {
 	
 	return (
 		<>
-			<h1 className="text-2xl">Your Products</h1>
+			<h1 className="text-2xl">Produsele tale</h1>
 			<div className="my-5 w-full flex items-center justify-end">
 					<CreateButton location={"/dashboard/products/add-product"} />
 				</div>

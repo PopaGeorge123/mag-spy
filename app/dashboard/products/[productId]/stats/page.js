@@ -82,7 +82,7 @@ export default async function ProductPage({ params: { productId } }) {
 				<div className="w-full mt-5 flex flex-col justify-center items-center md:flex-row ">
 					<div className="mt-5 w-full">
 						<div className="flex items-center justify-between">
-							<h1 className="m-2 text-xl">Price Chart</h1>
+							<h1 className="m-2 text-xl">Graficul prețului</h1>
 
 							{currentProduct.lastTimeUpdate && (<div className="flex">
 								<svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24">

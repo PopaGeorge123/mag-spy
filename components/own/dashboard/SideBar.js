@@ -49,7 +49,7 @@ export default function SideBar({ children }) {
 									<path fillRule="evenodd" d="M14 7h-4v3a1 1 0 0 1-2 0V7H6a1 1 0 0 0-.997.923l-.917 11.924A2 2 0 0 0 6.08 22h11.84a2 2 0 0 0 1.994-2.153l-.917-11.924A1 1 0 0 0 18 7h-2v3a1 1 0 1 1-2 0V7Zm-2-3a2 2 0 0 0-2 2v1H8V6a4 4 0 0 1 8 0v1h-2V6a2 2 0 0 0-2-2Z" clipRule="evenodd" />
 								</svg>
 
-								<span className="flex-1 ms-3 whitespace-nowrap">Products</span>
+								<span className="flex-1 ms-3 whitespace-nowrap">Produse</span>
 							</a>
 						</li>
 						<li>
@@ -59,7 +59,7 @@ export default function SideBar({ children }) {
 									<path fillRule="evenodd" d="M18.458 3.11A1 1 0 0 1 19 4v16a1 1 0 0 1-1.581.814L12 16.944V7.056l5.419-3.87a1 1 0 0 1 1.039-.076ZM22 12c0 1.48-.804 2.773-2 3.465v-6.93c1.196.692 2 1.984 2 3.465ZM10 8H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h6V8Zm0 9H5v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3Z" clipRule="evenodd" />
 								</svg>
 
-								<span className="flex-1 ms-3 whitespace-nowrap">Alerts</span>
+								<span className="flex-1 ms-3 whitespace-nowrap">Alerte</span>
 								{/* <span className="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">10</span> */}
 							</a>
 						</li>
