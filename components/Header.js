@@ -30,16 +30,16 @@ const Header = () => {
 
   const links = [
     {
-      href: "/#pricing",
-      label: "Pricing",
+      href: "/support",
+      label: "Need Help",
     },
     {
       href: "/#faq",
       label: "FAQ",
     },
     {
-      href: "/support",
-      label: "Need Help",
+      href: "/#pricing",
+      label: "Pricing",
     },
     {
       href: "/blog",
