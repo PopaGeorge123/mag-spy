@@ -104,9 +104,9 @@ Return the extracted data in the following JSON format:
     });
 
     
-    // if (!res.status.toString().startsWith('2')) {
-    //   throw new Error(`Failed to fetch data from ${website}: ${res.statusText}`);
-    // }
+    if (!res.status.toString().startsWith('2')) {
+      throw new Error(`Failed to fetch data from ${website}: ${res.statusText}`);
+    }
     
 
     const html = await res.text();
