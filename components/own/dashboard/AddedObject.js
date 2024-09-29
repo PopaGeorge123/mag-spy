@@ -27,7 +27,7 @@ export default function AddedObject({ name, isActive, imageUrl, id ,lastPrice,cu
 			</div>
 			<div className="max-h-fit p-5 flex flex-col justyfy-center align-center">
 				<div >
-					<h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{name.length >= 10 ? name.slice(0,10) + "..." : name}</h5>
+					<h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{name?.length >= 10 ? name.slice(0,10) + "..." : name}</h5>
 				</div>
 				<div className="flex items-center justify-between">
 					
@@ -38,6 +38,7 @@ export default function AddedObject({ name, isActive, imageUrl, id ,lastPrice,cu
 						</svg>
 					</a>) : (<></>)}
 					{lastPrice?.toString().length >=5 ? lastPrice?.toString().slice(0,5) : lastPrice } {!lastPrice ? "" :currency}
+					{/* {lastPrice } {!lastPrice ? "" :currency} */}
 				</div>
 			</div>
 		</div>

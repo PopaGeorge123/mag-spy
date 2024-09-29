@@ -1,4 +1,5 @@
 import { JSDOM } from 'jsdom';
+import config from '@/config';
 
 async function getRandomUserAgents() {
   const userAgents = [
@@ -45,25 +46,22 @@ export async function getPriceFromWebsite(url, selector) {
   const userAgent = await getRandomUserAgents();
 
   try {
-    const response = await fetch(url, {
+    const response = await fetch(`${config.scrapig.managerServer}/gethtml?url=${url}`, {
+      method: 'GET',
       headers: {
-        'User-Agent': userAgent,
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.9',
-        'Connection': 'keep-alive',
-        'Referer': url, // Optionally, provide referer to mimic real browsing
-        'DNT': '1',
-
+        'Content-Type': 'application/json',
+        'User-Agent': userAgent
       }
     });
-    console.log(response.status);
+    //console.log(response.status);
 
     //await sleep(Math.floor(Math.random() * 1000) + 500);
 
     //const dataFromSelector = await page.$eval(selector, el => el.textContent);
     //let htmlData = await page.$eval(selector, el => el.innerHTML);
 
-    const data = await response.text();
+    const dataFromScrapeServer = await response.json();
+    const data = dataFromScrapeServer.data;
     const dom = new JSDOM(data);
     const document = dom.window.document;
     const priceElement = document.querySelector(selector);

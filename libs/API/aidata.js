@@ -1,6 +1,7 @@
 import { JSDOM } from 'jsdom';
 import OpenAI from "openai";
 import fetch from "node-fetch"; // Ensure node-fetch is included
+import config from '@/config';
 
 async function getRandomUserAgents() {
   const userAgents = [
@@ -92,28 +93,26 @@ Return the extracted data in the following JSON format:
     
     const userAgent = await getRandomUserAgents();
 
-    const res = await fetch(website, {
+    const res = await fetch(`${config.scrapig.managerServer}/gethtml?url=${website}`, {
+      method: 'GET',
       headers: {
-        'User-Agent': userAgent,
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.9',
-        'Connection': 'keep-alive',
-        'Referer': website, // Optionally, provide referer to mimic real browsing
-        'DNT': '1',
+        'Content-Type': 'application/json',
+        'User-Agent': userAgent
       }
     });
+    console.log("WEBSITE FETCHED");
 
+    const dataFromScrapeServer = await res.json();
     
-    if (!res.status.toString().startsWith('2')) {
+    if (!dataFromScrapeServer.success) {
       throw new Error(`Failed to fetch data from ${website}: ${res.statusText}`);
     }
     
-
-    const html = await res.text();
-    console.log("WEBSITE FETCHED");
+    const data = dataFromScrapeServer.data;
+    
 
     //upload the file
-    const blob = new Blob([html], { type: 'text/html' });
+    const blob = new Blob([data], { type: 'text/html' });
     const fileName = 'dataFromWebsite.html';
     const fileMime = 'text/html';
     const file = new File([blob], fileName, { type: fileMime }); 
