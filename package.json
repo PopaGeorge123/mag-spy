@@ -30,7 +30,7 @@
     "ldrs": "^1.0.2",
     "luxon": "^3.5.0",
     "mailgun.js": "^9.4.1",
-    "mongodb": "^6.9.0",
+    "mongodb": "^5.9.2",
     "mongoose": "^7.6.10",
     "next": "^14.2.12",
     "next-auth": "^4.24.7",
