@@ -39,19 +39,28 @@ async function getRandomUserAgents() {
 
 }
 
-export async function getPriceFromWebsite(url, selector) {
+export async function getPriceFromWebsite(website, selector) {
   //const sleep = ms => new Promise(res => setTimeout(res, ms));
+  const proxy = {
+    host: process.env.PROXY_HOST,
+    port: process.env.PROXY_PORT,
+    auth: {
+      username: process.env.PROXY_USERNAME, 
+      password: process.env.PROXY_PASSWORD
+    },
+  };
 
   // Set a random User-Agent
   const userAgent = await getRandomUserAgents();
 
   try {
-    const response = await fetch(`${config.scrapig.managerServer}/gethtml?url=${url}`, {
+    //const response = await fetch(`${config.scrapig.managerServer}/gethtml?url=${url}`, {
+    const response = await fetch( website , {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
         'User-Agent': userAgent
-      }
+      },
+      proxy: proxy,
     });
     //console.log(response.status);
 
@@ -60,9 +69,8 @@ export async function getPriceFromWebsite(url, selector) {
     //const dataFromSelector = await page.$eval(selector, el => el.textContent);
     //let htmlData = await page.$eval(selector, el => el.innerHTML);
 
-    const dataFromScrapeServer = await response.json();
-    const data = dataFromScrapeServer.data;
-    const dom = new JSDOM(data);
+    const dataFromResponse = await response.text();
+    const dom = new JSDOM(dataFromResponse);
     const document = dom.window.document;
     const priceElement = document.querySelector(selector);
     let htmlData = priceElement ? priceElement.innerHTML : null;

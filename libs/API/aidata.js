@@ -47,6 +47,14 @@ export async function getDataFromAI(website) {
   //  - Be carefull, some websites have some offers or some discounts if user do some acctions, but you need to determine only the main price.
   //  - The selector should return the price element when used with the document.querySelector() method.
 
+  const proxy = {
+    host: process.env.PROXY_HOST,
+    port: process.env.PROXY_PORT,
+    auth: {
+      username: process.env.PROXY_USERNAME, 
+      password: process.env.PROXY_PASSWORD
+    },
+  };
 
 
   const assistantId = "asst_lIC6V7YskLALbKKoSgOL29T6";
@@ -93,26 +101,27 @@ Return the extracted data in the following JSON format:
     
     const userAgent = await getRandomUserAgents();
 
-    const res = await fetch(`${config.scrapig.managerServer}/gethtml?url=${website}`, {
+    const response = await fetch( website , {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
         'User-Agent': userAgent
-      }
+      },
+      proxy: proxy,
     });
     console.log("WEBSITE FETCHED");
 
-    const dataFromScrapeServer = await res.json();
+    //const dataFromScrapeServer = await response.json();
+    const dataFromResponse = await response.text();
     
-    if (!dataFromScrapeServer.success) {
-      throw new Error(`Failed to fetch data from ${website}: ${res.statusText}`);
-    }
+    // if (!dataFromResponse.success) {
+    //   throw new Error(`Failed to fetch data!`);
+    // }
     
-    const data = dataFromScrapeServer.data;
+    //const data = dataFromScrapeServer.data;
     
 
     //upload the file
-    const blob = new Blob([data], { type: 'text/html' });
+    const blob = new Blob([dataFromResponse], { type: 'text/html' });
     const fileName = 'dataFromWebsite.html';
     const fileMime = 'text/html';
     const file = new File([blob], fileName, { type: fileMime }); 
