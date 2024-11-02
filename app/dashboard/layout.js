@@ -17,7 +17,9 @@ export default async function LayoutPrivate({ children }) {
   <>
     <UserNavbar />
     <SideBar>
-      {children}
+      <div className="mt-16">
+        {children}
+      </div>
     </SideBar>
   </>
   );
